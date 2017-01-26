@@ -13,10 +13,11 @@ var fs = require('fs'),
 app.use(express.static(__dirname + '/public'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-app.use(morgan('common'))
-    //
-    //  Load Routes/Modules
-    //
+    //app.use(morgan('common'))
+
+//
+//  Load Routes/Modules
+//
 function modLoader(configFile) {
     modules = JSON.parse(fs.readFileSync(configFile))
     for (var key in modules) {

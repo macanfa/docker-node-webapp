@@ -13,6 +13,7 @@
 <body>
     <nav>#navigation#</nav>
     <h1>#title#</h1>
+    <p>#content#</p>
     <pre>#code#</pre>
 </body>
 

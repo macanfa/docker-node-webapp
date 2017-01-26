@@ -3,7 +3,7 @@ var router = require('express').Router()
 router.get('/', function(req, res) {
     res.render('api', {
         title: 'RestFul API',
-        code: 'Webservice RestFul API'
+        content: 'Webservice RestFul API'
     })
 })
 router.post('/', function(req, res) {

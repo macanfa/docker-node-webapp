@@ -6,10 +6,29 @@ function prettify(obj) {
 }
 
 function callback(data) {
-    dataList.innerHTML = '';
     if (data) {
-        dataList.innerHTML = prettify(data);
+        console.log(prettify(data));
     }
+}
+
+function displayList(data) {
+    callback(data)
+    dataList.innerHTML = ''
+    for (var i = 0; i < data.length; i++) {
+        dataObject = JSON.stringify(data[i])
+        if (data[i].name.charAt(0) != '.') {
+            dataList.innerHTML += '<button onclick="playMedia(' + data[i].id + ')">' + data[i].name + '</button>' + "\n"
+        }
+    }
+}
+
+function playMedia(id) {
+    $.getJSON('/media/list/' + id, function(media) {
+        dataName.innerHTML = '<i>Streaming : ' + media.name + '</i>'
+        videoID.innerHTML = '<video controls preload autoplay>' +
+            '<source src="/media/play/' + media.id + '" type="' + media.mime + '">' +
+            '</video>'
+    })
 }
 
 //
@@ -74,4 +93,15 @@ function restFul(methode, id, object, callback) {
             })
             break
     }
+}
+
+//
+//  jQuery Media Calls
+//
+function getMediaList() {
+    $.get('/media/list', null,
+        function(data, textStatus, jqXHR) {
+            displayList(data)
+        }
+    )
 }
