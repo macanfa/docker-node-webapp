@@ -1,11 +1,10 @@
-var router = require('express').Router(),
-    fs = require('fs')
+var router = require('express').Router()
 
 router.get('/', function(req, res) {
     res.render('index', {
         title: 'Willkommen',
         content: 'NodeJS, ExpressJS & Template Engine',
-        code: fs.readFileSync('./README.md', 'utf8')
+        code: '--- Running PID:' + process.pid + ' ---'
     })
 })
 
