@@ -1,7 +1,6 @@
 var fs = require('fs'),
     express = require('express'),
     bodyParser = require('body-parser'),
-    morgan = require('morgan'),
     app = express(),
     configFile = __dirname + '/config/modules.json',
     appPort = 8080
@@ -13,7 +12,6 @@ var fs = require('fs'),
 app.use(express.static(__dirname + '/public'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-    //app.use(morgan('common'))
 
 //
 //  Load Routes/Modules
