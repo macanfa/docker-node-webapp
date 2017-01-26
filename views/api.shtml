@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script type="application/x-javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="application/x-javascript" src="/javascripts/api.js"></script>
+    <title>#title#</title>
+</head>
+
+<body>
+    <nav>#navigation#</nav>
+    <h1>#title#</h1>
+    <pre>#code#</pre>
+</body>
+
+</html>

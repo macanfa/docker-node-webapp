@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>#title#</title>
+</head>
+
+<body>
+    <nav>#navigation#</nav>
+    <h1>#title#</h1>
+    <p>#content#</p>
+    <pre>#code#</pre>
+</body>
+
+</html>
