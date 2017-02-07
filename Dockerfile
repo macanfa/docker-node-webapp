@@ -1,7 +1,12 @@
 FROM node:boron
 
+# Create new User
+RUN adduser --disabled-password --gecos "NodeJS User" nodejs
+
 # Create app directory
 RUN mkdir -p /usr/src/app
+RUN chown nodejs:nodejs /usr/src/app
+
 WORKDIR /usr/src/app
 
 # Install app dependencies

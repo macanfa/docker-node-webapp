@@ -19,7 +19,7 @@ node 				boron      539c0211cd76    3 weeks ago
 your username/node-webapp 	latest     d64d3505b0d2    1 minute ago
 ```
 # Run the image
-```docker run -p 8080:8080 -d <your username>/node-webapp```
+```docker run -p 8080:8080 --user nodejs -v /<local path to>/work:/usr/src/app/work --name webapp -d <your username>/node-webapp```
 
 # Print the output of your app:
 ## Get container ID

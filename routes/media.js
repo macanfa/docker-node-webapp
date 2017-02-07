@@ -2,7 +2,7 @@ var router = require('express').Router(),
     fs = require('fs'),
     path = require('path'),
     mime = require('mime'),
-    mediaRoot = './media'
+    mediaRoot = './work'
 
 function dump_req(req) {
     return req.method + " " + req.url + " " + req.httpVersion + "\n" +
