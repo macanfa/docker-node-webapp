@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 //
 //  CORS for APIs
 //
-CORS = function (req,res,next) {
+CORS = function (req, res, next) {
     res.header("X-Powered-By","NodeJS")
     res.header('Access-Control-Allow-Origin', '*')
     res.header('Access-Control-Allow-Credentials', true)
