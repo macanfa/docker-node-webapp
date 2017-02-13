@@ -12,6 +12,18 @@ var fs = require('fs'),
 app.use(express.static(__dirname + '/public'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
+//
+//  CORS for APIs
+//
+CORS = function (req,res,next) {
+    res.header("X-Powered-By","NodeJS")
+    res.header('Access-Control-Allow-Origin', '*')
+    res.header('Access-Control-Allow-Credentials', true)
+    res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS')
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Api-Key, User')
+    next()
+}
+app.use(CORS)
 
 //
 //  Load Routes/Modules
